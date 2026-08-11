@@ -1,0 +1,94 @@
+collision_recovery:
+  ros__parameters:
+    use_sim_time: false
+
+    cmd_vel_in_topic: /cmd_vel_smoothed
+    cmd_vel_out_topic: /cmd_vel_recovery
+    scan_topic: /scan
+
+    # ZONES NORMALES
+    front_x_min: 0.59
+    front_x_max: 0.90
+    front_y_min: -0.40
+    front_y_max: 0.40
+
+    rear_x_min: -0.95
+    rear_x_max: -0.59
+    rear_y_min: -0.40
+    rear_y_max: 0.40
+
+    left_front_x_min: 0.00
+    left_front_x_max: 0.59
+    left_front_y_min: 0.40
+    left_front_y_max: 0.50
+
+    left_rear_x_min: -0.59
+    left_rear_x_max: 0.00
+    left_rear_y_min: 0.40
+    left_rear_y_max: 0.50
+
+    right_front_x_min: 0.00
+    right_front_x_max: 0.59
+    right_front_y_min: -0.50
+    right_front_y_max: -0.40
+
+    right_rear_x_min: -0.59
+    right_rear_x_max: 0.00
+    right_rear_y_min: -0.50
+    right_rear_y_max: -0.40
+
+    # ZONES ÉLARGIES DE RECOVERY
+    recovery_front_x_min: 0.50
+    recovery_front_x_max: 1.05
+    recovery_front_y_min: -0.45
+    recovery_front_y_max: 0.45
+
+    recovery_rear_x_min: -1.10
+    recovery_rear_x_max: -0.50
+    recovery_rear_y_min: -0.45
+    recovery_rear_y_max: 0.45
+
+    recovery_left_front_x_min: -0.10
+    recovery_left_front_x_max: 0.70
+    recovery_left_front_y_min: 0.35
+    recovery_left_front_y_max: 0.60
+
+    recovery_left_rear_x_min: -0.70
+    recovery_left_rear_x_max: 0.10
+    recovery_left_rear_y_min: 0.35
+    recovery_left_rear_y_max: 0.60
+
+    recovery_right_front_x_min: -0.10
+    recovery_right_front_x_max: 0.70
+    recovery_right_front_y_min: -0.60
+    recovery_right_front_y_max: -0.35
+
+    recovery_right_rear_x_min: -0.70
+    recovery_right_rear_x_max: 0.10
+    recovery_right_rear_y_min: -0.60
+    recovery_right_rear_y_max: -0.35
+
+    trigger_min_points: 3
+    escape_stop_min_points: 3
+    recovery_clear_max_points: 0
+
+    minimum_linear_command: 0.03
+    minimum_angular_command: 0.10
+
+    pause_duration: 0.25
+
+    forward_escape_speed: 0.20
+    backward_escape_speed: -0.20
+    turn_escape_speed: 0.20
+
+    max_linear_escape_duration: 8.0
+    max_turn_escape_duration: 6.0
+
+    clear_hold_duration: 0.50
+    cooldown_duration: 0.50
+
+    max_direction_switches: 1
+
+    scan_timeout: 0.50
+    command_timeout: 0.50
+    control_frequency: 20.0
